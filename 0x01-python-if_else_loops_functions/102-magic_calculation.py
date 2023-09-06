@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def magic_calculation(a, b, c):
     if a < b:
-        return c ** 2
-    else:
-        raise Exception("a cannot be greater than or equal to b")
+        return c
+    if  c > b:
+        return a + b
+    return (a*b - c)
