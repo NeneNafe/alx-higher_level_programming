@@ -2,6 +2,27 @@
 #include <stddef.h>
 
 /**
+ * reverse_listint - reverses a linked list
+ * @head: pointer to header
+ * Return: Success.
+ */
+void reverse_listint(listint_t **head)
+{
+	listint_t *prev = NULL;
+	listint_t *current = *head;
+	listint_t *next = NULL;
+
+	while (current)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+	*head = prev;
+}
+
+/**
  * is_palindrome -  checks if a singly linked list is a palindrome
  * @head: pointer to head
  * Return: 0 if not a palindrome,
