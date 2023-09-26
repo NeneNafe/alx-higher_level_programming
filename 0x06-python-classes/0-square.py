@@ -9,4 +9,3 @@ class Square:
     class Square that define a square. No modules were imported"""
 
     pass
-    """initialiazes the square class, by taking size and an arg"""
