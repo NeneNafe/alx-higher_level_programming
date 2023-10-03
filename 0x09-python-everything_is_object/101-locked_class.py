@@ -3,11 +3,8 @@
 
 
 class LockedClass:
-    """Defines a locked class"""
+    """Defines a locked class that prevents the dynamic creation
+    of new intstance attribute, except for an isntance attribute call fistname
+    """
 
-    def __setattr__(self, name, value):
-        if name != "first_name":
-            raise AttributeError(
-                "'LockeClass' object has no attribute '{}'".format(name)
-            )
-        super().__setattr__(name, value)
+    __slots__ = ["first_name"]
