@@ -1,4 +1,4 @@
-#!/usr/bin/pyrhon3
+#!/usr/bin/python3
 """Define a Class"""
 
 
@@ -7,4 +7,4 @@ class LockedClass:
     of new intstance attribute, except for an isntance attribute call fistname
     """
 
-    __slots__ = ["first_name"]
+    __slots__ = ("first_name")
