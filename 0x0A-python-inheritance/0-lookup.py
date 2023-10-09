@@ -8,4 +8,4 @@ def lookup(obj):
     and methods of an object
     """
 
-    return [attr for attr in dir(obj) if not callable(getattr(obj, attr))]
+    return [attr for attr in dir(obj)]
