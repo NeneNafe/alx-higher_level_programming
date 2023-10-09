@@ -27,5 +27,5 @@ class Rectangle(BaseGeometry):
         """return the representations of a str and print function"""
 
         string = "[" + str(self.__class__.__name__) + "]"
-        string += str(self.__width) + "/" + str(self.__height)
+        string += " " + str(self.__width) + "/" + str(self.__height)
         return string
