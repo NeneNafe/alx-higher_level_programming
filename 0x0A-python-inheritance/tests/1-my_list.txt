@@ -1,0 +1,93 @@
+Test for 1-my_list.py
+---------------------------------------------------------------------------------------
+
+case 0: import
+>>> MyList = __import__('1-my_list').MyList
+>>>
+--------------------------------------------------------------------------------------
+
+case 1: common case
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(4)
+>>> my_list.append(2)
+>>> my_list.append(3)
+>>> my_list.append(5)
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+>>> my_list.print_sorted()
+[1, 2, 4, 4, 5]
+>>> print(my_list)
+[1, 4, 2, 3, 5]
+
+----------------------------------------------------------
+
+case 1: passed a list
+
+>>> a = [1, 9, 4]
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[1, 4, 9]
+>>>
+
+------------------------------------------------------------
+
+case 3: empty list
+
+>>> a = []
+>>> my_list = MyList(a)
+>>> my_list.print_sorted()
+[]
+>>>
+
+--------------------------------------------------------------
+
+case 4: unique number
+
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.print_sorted()
+[1]
+>>> print(my_list)
+>>>
+
+----------------------------------------------------------------------
+
+case 5: same number
+>>> my_list2 = MyList()
+>>> my_list2 = append(1)
+>>> my_list2 = append(1)
+>>> my_list2 = append(1)
+>>> my_list2 = append(1)
+>>> my_list2.print_sorted()
+>>>
+
+---------------------------------------------------------------------------------
+
+case 6: negative numbers
+
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list.append(5)
+>>> my_list.append(1)
+>>> my_list.append(-1)
+>>> my_list.append(51)
+>>> my_list.append(-5)
+>>> my_list.print_sorted()
+[-5, -1, 1, 5, 51]
+>>>
+
+--------------------------------------------------------------------------
+
+case 7: unknown variable
+
+[1, 4, 2, 3, 5]
+Traceback (most recent call last):
+  File "1-main.py", line 11, in <module>
+    my_list.print_sorted()
+  File "/alx-higher_level_programming/0x0A-python-inheritance/1-my_list.py", line 11, in print_sorted
+    sorted_list = soerted(self)
+NameError: name 'soerted' is not defined
+
+-------------------------------------------------------------------------------
