@@ -1,0 +1,14 @@
+ Test case 1: Testing area() method
+Calling area() on an instance of BaseGeometry should raise an exception.
+
+# Test case 2: Testing integer_validator with valid input
+Calling integer_validator with valid input should not raise an exception.
+
+# Test case 3: Testing integer_validator with a non-integer value
+Calling integer_validator with a non-integer value should raise a TypeError.
+
+# Test case 4: Testing integer_validator with a negative value
+Calling integer_validator with a negative value should raise a ValueError.
+
+# Test case 5: Testing integer_validator with a zero value
+Calling integer_validator with a zero value should raise a ValueError.
