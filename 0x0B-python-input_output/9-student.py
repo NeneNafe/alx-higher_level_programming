@@ -17,19 +17,4 @@ class Student:
         self.age = age
 
     def to_json(self):
-        result = {}
-        for attr, value in self.__dict__.items():
-            result[attr] = self._convert_to_serializable(value)
-        return result
-    def _convert_to_serializable(self, value):
-        if isinstance(value, int) or isinstance(value, bool) or isinstance(value, str):
-
-            return value
-        elif isinstance(value, list):
-            return [self._convert_to_serializable(item) for item in value]
-        elif isinstance(value, dict):
-            return {key: self._convert_to_serializable(val) for key, val in value.items()}
-        elif hasattr(value, '__dict__'):
-            return {key: self._convert_to_serializable(val) for key, val in value.__dict__.items()}
-        else:
-            return None
+        return self.__dict__
