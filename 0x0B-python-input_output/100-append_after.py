@@ -8,11 +8,11 @@ def append_after(filename="", search_string="", new_string=""):
     containing a specific string
     """
 
-    with open(filename, 'r') as file:
-        lines = file.readlines()
-
-    with open(filename, 'w') as file:
-        for line in lines:
-            file.write(line)
+    lines_to_insert = ""
+    with open(filename) as r:
+        for line in r:
+            lines_to_insert += line
             if search_string in line:
-                file.write(new_string + '\n')
+                lines_to_insert += new_string
+    with open(filename, 'w') as w:
+        w.write(lines_to_insert)
