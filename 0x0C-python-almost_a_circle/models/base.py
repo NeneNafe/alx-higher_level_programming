@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a super class Base"""
 
+
 class Base:
 
     __nb_objects = 0
