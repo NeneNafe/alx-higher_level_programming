@@ -22,6 +22,10 @@ class Rectangle(Base):
 
         super().__init__(id)
 
+    def area(self):
+        """returns the area of the rectangle instance"""
+        return self.__width * self.__height
+
         @property
         def width(self):
             return self.__width
