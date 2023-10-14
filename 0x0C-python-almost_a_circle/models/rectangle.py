@@ -71,9 +71,11 @@ class Rectangle(Base):
             self.__y = value
 
     def display(self):
-        for height in range(self.__height):
-            for width in range(self.__width):
-                print('#', end='')
+        """displays the rectangls with character #"""
+        print("\n" * self.__y, end="")
+        for i in range(self.__height):
+            print(" " * self.__x, end="")
+            print("#" * self.__width, end="")
             print()
 
     def __str__(self):
