@@ -29,7 +29,7 @@ class Base:
         else:
             return json.dumps(list_dictionaries)
 
-    @classmethod    
+    @classmethod
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file"""
         if list_objs is not None:
@@ -42,3 +42,10 @@ class Base:
 
         with open(filename, 'w') as file:
             file.write(cls.to_json_string(list_dict))
+
+    def from_json_string(json_string):
+        """returns the list of the JSON string representation json_string"""
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
