@@ -79,8 +79,8 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
-        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - " \
-                f"{self.__width}/{self.__height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
+                f"{self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """Assignes an argument to each attribute"""
@@ -108,3 +108,12 @@ class Rectangle(Base):
                 self.x = kwargs['x']
             if 'y' in kwargs:
                 self.y = kwargs['y']
+
+    def to_dictionary(self):
+        return {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+                }
