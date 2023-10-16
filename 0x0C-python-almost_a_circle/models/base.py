@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Defines a super class Base"""
 
+import os
 import json
 
 
@@ -59,3 +60,22 @@ class Base:
         dummy_instance.update(**dictionary)
 
         return dummy_instance
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        class_name = cls.__name__
+        filename = f"{class_name}.json"
+
+        if not os.path.exists(filename):
+            return []
+
+        with open(filename, 'r') as f:
+            json_str = f.read()
+
+        if json_str:
+            list_dicts = cls.from_json_string(json_str)
+            instances = [cls.create(**dict_obj) for dict_obj in list_dicts]
+            return instances
+
+        return []
