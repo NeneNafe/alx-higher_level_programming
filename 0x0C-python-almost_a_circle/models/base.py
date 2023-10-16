@@ -6,6 +6,7 @@ import json
 
 
 class Base:
+    """This is a Base Class"""
 
     __nb_objects = 0
     """This is a private class attribute"""
