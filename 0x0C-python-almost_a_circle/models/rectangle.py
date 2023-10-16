@@ -27,10 +27,12 @@ class Rectangle(Base):
         return self.width * self.height
 
         @property
+        """retrieves the attribute instance"""
         def width(self):
             return self.__width
 
         @width.setter
+        """a setter method for height"""
         def width(self, value):
             if type(value) is not int:
                 raise TypeError("width must be an integer")
@@ -44,8 +46,8 @@ class Rectangle(Base):
             return self.__height
 
         @height.setter
+        """a setter method for height"""
         def height(self, value):
-            """a setter method for height"""
             if type(value) is not int:
                 raise TypeError("width must be an integer")
             if value <= 0:
@@ -53,20 +55,24 @@ class Rectangle(Base):
             self.__height = value
 
         @property
+        """retrieves the attribute instance"""
         def x(self):
             return self.__x
 
         @x.setter
+        """sets value to attribute"""
         def x(self, value):
             if x < 0:
                 raise ValueError("x must be >= 0")
             self.__x = value
 
         @property
+        """retrieves the attribute instance"""
         def y(self):
             return self.__y
 
         @y.setter
+        """sets value to attribute"""
         def y(self, value):
             if y < 0:
                 raise ValueError("y must be >= 0")
