@@ -39,11 +39,13 @@ class Rectangle(Base):
             self.__width = value
 
         @property
+        """a getter method"""
         def height(self):
             return self.__height
 
         @height.setter
         def height(self, value):
+            """a setter method for height"""
             if type(value) is not int:
                 raise TypeError("width must be an integer")
             if value <= 0:
@@ -79,8 +81,9 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """An __str__ function for the class rectangle"""
         return f"[Rectangle] ({self.id}) {self.x}/{self.y} - " \
-                f"{self.width}/{self.height}"
+            f"{self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """Assignes an argument to each attribute"""
@@ -110,6 +113,7 @@ class Rectangle(Base):
                 self.y = kwargs['y']
 
     def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
         return {
                 "id": self.id,
                 "width": self.width,
