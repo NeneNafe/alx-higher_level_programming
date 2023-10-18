@@ -39,10 +39,6 @@ class Rectangle(Base):
 
         super().__init__(id)
 
-    def area(self):
-        """returns the area of the rectangle instance"""
-        return self.width * self.height
-
         @property
         def width(self):
             """retrieves the attribute instance"""
@@ -98,6 +94,10 @@ class Rectangle(Base):
             if value < 0:
                 raise ValueError("y must be >= 0")
             self.__y = value
+
+    def area(self):
+        """returns the area of the rectangle instance"""
+        return self.width * self.height
 
     def display(self):
         """displays the rectangls with character #"""
