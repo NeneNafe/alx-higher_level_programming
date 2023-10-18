@@ -25,6 +25,8 @@ class Square(Rectangle):
     def size(self, value):
         if type(value) is not int:
             raise TypeError("width must be an integer")
+        if value <= 0:
+            raise ValueError("size must be > 0")
 
         self.width = value
         self.height = value
@@ -32,13 +34,13 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """an update function that takes args and kwargs as arguments"""
         if args:
-            if len(args) >= 1:
+            if len(args) > 0:
                 self.id = args[0]
-            if len(args) >= 2:
+            if len(args) > 1:
                 self.size = args[1]
-            if len(args) >= 3:
+            if len(args) > 2:
                 self.x = args[2]
-            if len(args) >= 4:
+            if len(args) > 3:
                 self.y = args[3]
         else:
             if 'id' in kwargs:
