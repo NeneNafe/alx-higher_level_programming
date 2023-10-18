@@ -62,7 +62,7 @@ class Rectangle(Base):
         @x.setter
         def x(self, value):
             """sets value to attribute"""
-            if x < 0:
+            if value <= 0:
                 raise ValueError("x must be >= 0")
             self.__x = value
 
@@ -74,7 +74,7 @@ class Rectangle(Base):
         @y.setter
         def y(self, value):
             """sets value to attribute"""
-            if y < 0:
+            if y <= 0:
                 raise ValueError("y must be >= 0")
             self.__y = value
 
@@ -95,15 +95,15 @@ class Rectangle(Base):
         """Assignes an argument to each attribute"""
 
         if args:
-            if len(args) >= 1:
+            if len(args) > 0:
                 self.id = args[0]
-            if len(args) >= 2:
+            if len(args) > 1:
                 self.width = args[1]
-            if len(args) >= 3:
+            if len(args) > 2:
                 self.height = args[2]
-            if len(args) >= 4:
+            if len(args) > 3:
                 self.x = args[3]
-            if len(args) >= 5:
+            if len(args) > 4:
                 self.y = args[4]
 
         if kwargs:
