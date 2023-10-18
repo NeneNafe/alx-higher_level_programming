@@ -92,9 +92,9 @@ class TestBase(unittest.TestCase):
         self.assertEqual(result, [])
 
         # Test with an empty JSON string
-        json_string = []
+        json_string = '[]'
         result = Base.from_json_string(json_string)
-        self.assertEwaula(result, [])
+        self.assertEqual(result, [])
 
         # Test the validity of a string
         json_string = '[{"id": 1, "name": "Item 1"}, '\
@@ -105,7 +105,19 @@ class TestBase(unittest.TestCase):
         ]
 
         result = Base.from_json_string(json_string)
-        self.assertEqual(result, expected)
+        self.assertEqual(result, expected_result)
+
+    def load_from_file(self):
+        # Test if file exists
+        result = Base.load_from_file()
+        self.assertEqual(result, [])
+
+        # create a file with some JSON ddata for testing
+        class_name = "Base"
+        filename = f"{classs_name}.json"
+        with open(filename, 'w') as f:
+            f.write('[{"id": 1, "name": "Item 1"}, '
+                    '{"id": 2, "name": "Item 2"}]')
 
 
 if __name__ == '__main__':
