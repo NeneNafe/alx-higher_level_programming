@@ -1,0 +1,16 @@
+PROJECT TITLE: 0x0D. SQL - Introduction
+
+Tasks
+0. List databases
+1. Create a database
+2. Delete a database
+3. List tables
+4. First table
+5. Full description
+6. List all in table
+7. First add
+8. Count 89
+9. Full creation
+10. List by best
+...
+16. Say my name
