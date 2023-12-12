@@ -13,10 +13,10 @@ class Rectangle {
 
   print () {
     for (let i = 0; i < this.height; i++) {
-      let myvar = '';
+      let myVar = '';
       let j = 0;
       while (j < this.width) {
-        myvar += 'X';
+        myVar += 'X';
         j++;
       }
       console.log(myvar);
