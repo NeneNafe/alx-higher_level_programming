@@ -19,7 +19,7 @@ class Rectangle {
         myVar += 'X';
         y++;
       }
-      console.log(myvar);
+      console.log(myVar);
     }
   }
 }
