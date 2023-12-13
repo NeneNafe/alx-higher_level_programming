@@ -4,17 +4,8 @@
  */
 
 exports.converter = function (base) {
-  const convert = function (number) {
-    if (number === 0) {
-      return '';
-    } else {
-      const remainder = number % base;
-      const quotient = Math.floor(number / base);
-      return convert(quotient) + remainder;
+    function myConverter (n) {
+        return n.toString(base);
     }
-  };
-
-  return function (number) {
-    return convert(number);
-  };
+    return myConverter;
 };
