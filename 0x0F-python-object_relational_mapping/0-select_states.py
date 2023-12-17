@@ -2,19 +2,28 @@
 """a script that lists all states from thedatabase hbtn_0e_0_usa
 """
 
-import MySQLdb
-from sys import argv
 
-if __name__ == '__main__':
+def mylinkedstates():
     """Gives access to the db and get the states frome the db"""
-    connect_db = MySQLdb.connect(
-        host="localhost", user=argv[1], port=3306, passwd=argv[2], db=argv[3])
+    import MySQLdb
+    import sys
 
-    db_cursor = connect_db.cursor()
-
-    db_cursor.execute("SELECT * FROM sates")
-
-    rows_selected = db_cursor.fetchall()
-
-    for row in row_selected:
+    mysql_username = sys.argv[1]
+    mysql_password = sys.argv[2]
+    db_name = sys.argv[3]
+    db = MySQLdb.connect(host="localhost",
+                         port=3306,
+                         user=mysql_username,
+                         passwd=mysql_password,
+                         db=db_name)
+    cmdquery = f"SELECT * FROM states ORDER BY id ASC" 
+    cursor = db.cursor()
+    cursor.execute(cmdquery)
+    rows = cursor.fetchall()
+    for row in rows:
         print(row)
+    cursor.close()
+    db.close()
+
+    if __name__ == '__main__':
+        mylinkedstates()
