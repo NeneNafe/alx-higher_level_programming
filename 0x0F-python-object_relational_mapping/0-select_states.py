@@ -16,7 +16,7 @@ def mylinkedstates():
                          user=mysql_username,
                          passwd=mysql_password,
                          db=db_name)
-    cmdquery = f"SELECT * FROM states ORDER BY id ASC" 
+    cmdquery = f'SELECT * FROM states ORDER BY id ASC'
     cursor = db.cursor()
     cursor.execute(cmdquery)
     rows = cursor.fetchall()
