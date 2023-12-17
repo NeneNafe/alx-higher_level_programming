@@ -18,7 +18,8 @@ def stateswithN():
                          user=username,
                          passwd=password,
                          db=db_name)
-    cmdquery = f'SELECT * FROM states WHERE name LIKE "N%" ORDER BY id ASC'
+    cmdquery = f'SELECT * FROM states WHERE name LIKE BINARY "N%" \
+        ORDER BY states.id ASC'
     cursor = db.cursor()
     cursor.execute(cmdquery)
     rows = cursor.fetchall()
