@@ -7,14 +7,13 @@ def mylinkedstates():
     """Gives access to the db and get the states frome the db"""
     import MySQLdb
     import sys
-
-    mysql_username = sys.argv[1]
-    mysql_password = sys.argv[2]
+    username = sys.argv[1]
+    password = sys.argv[2]
     db_name = sys.argv[3]
-    db = MySQLdb.connect(host="localhost",
+    db = MySQLdb.connect(host='localhost',
                          port=3306,
-                         user=mysql_username,
-                         passwd=mysql_password,
+                         user=username,
+                         passwd=password,
                          db=db_name)
     cmdquery = f'SELECT * FROM states ORDER BY id ASC'
     cursor = db.cursor()
@@ -25,5 +24,5 @@ def mylinkedstates():
     cursor.close()
     db.close()
 
-    if __name__ == '__main__':
+    if __name__ == "__main__":
         mylinkedstates()
