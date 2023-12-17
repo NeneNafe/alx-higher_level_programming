@@ -25,5 +25,6 @@ def mylinkedstates():
     cursor.close()
     db.close()
 
+
 if __name__ == "__main__":
     mylinkedstates()
