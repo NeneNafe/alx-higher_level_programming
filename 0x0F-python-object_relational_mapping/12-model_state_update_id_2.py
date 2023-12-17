@@ -13,8 +13,8 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-chngd_state = session.query(State).filter(State.id == 2).first()
-chngd_state.name = "New Mexico"
-session.commit()
+    chngd_state = session.query(State).filter(State.id == 2).first()
+    chngd_state.name = "New Mexico"
+    session.commit()
 
-session.close()
+    session.close()
