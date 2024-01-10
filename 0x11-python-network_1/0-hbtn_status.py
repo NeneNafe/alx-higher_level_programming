@@ -12,6 +12,6 @@ if __name__ == "__main__":
         decoded_content = web_content.decode('utf-8')
 
         print("Body response:")
-        print('\t- type:', type(web_content))
-        print('\t- content:', web_content)
-        print('\t- utf8 conent:', decoded_content)
+        print("\t- type: {}".format(type(web_content)))
+        print("\t- content: {}".format(web_content))
+        print("\t- utf8 conent: {}".format(decoded_content))
