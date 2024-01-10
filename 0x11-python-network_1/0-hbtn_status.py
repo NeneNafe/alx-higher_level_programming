@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" a Python script that fetche a url """
+""" a Python script that fetches a url """
 
 
 if __name__ == "__main__":
@@ -14,4 +14,4 @@ if __name__ == "__main__":
         print("Body response:")
         print("\t- type: {}".format(type(web_content)))
         print("\t- content: {}".format(web_content))
-        print("\t- utf8 conent: {}".format(decoded_content))
+        print("\t- utf8 content: {}".format(decoded_content))
