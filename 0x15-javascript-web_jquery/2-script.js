@@ -1,3 +1,3 @@
-$('DIV#red_header').clicks (function () {
+$('#red_header').click(function () {
   $('header').css('color', '#FF0000');
 });
